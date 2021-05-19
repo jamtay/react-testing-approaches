@@ -20,13 +20,3 @@ Any of the `yarn` commands can be swapped for the `npm` alternative if desired.
 
 - master: Contains all code and test code
 - development-code: Contains just the development code. Can be used to code along to with the article
-
-## Running tests
-
-To run unit tests, run the command: `yarn test`. Then press "a" to run all tests.
-
-To run all unit tests with a coverage report, run `yarn run test:coverage`.
-
-To run cypress end-to-end tests, run `yarn run cypress`. Select the test, from the cypress browser, that you want to run.
-
-To run all the cypress end-to-end tests, run `yarn run cypress:all`
