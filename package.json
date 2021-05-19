@@ -1,0 +1,71 @@
+{
+  "name": "react-testing-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^5.1.2",
+    "@testing-library/user-event": "^12.1.10",
+    "axe-core": "^4.2.0",
+    "cypress": "^7.2.0",
+    "cypress-axe": "^0.12.2",
+    "cypress-cucumber-preprocessor": "^4.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "husky": "^6.0.0",
+    "jest-axe": "^4.1.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "npm test -- --watchAll=false --coverage",
+    "eject": "react-scripts eject",
+    "postinstall": "husky install",
+    "cypress": "cypress open",
+    "cypress:all": "cypress run --spec \"**/*.test.js,**/*.feature\" --headed --browser chrome"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ],
+    "coverageReporters": [
+      "text"
+    ]
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
